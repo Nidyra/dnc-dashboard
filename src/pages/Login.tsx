@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Box, Container, Grid } from '@mui/material'
 
 const LoginArea = styled.div`
   background: #999;
@@ -14,8 +15,18 @@ const LoginImage = styled.div`
 function Login() {
   return (
     <>
-        <LoginArea>LOGIN</LoginArea>
-        <LoginImage/>
+        <Box>
+          <Grid container>
+            <Grid item xs={12} sm={6} sx={{alignItems: 'center', display:'flex', height:'100vh'}}>
+                <Container maxWidth="sm">
+                  <LoginArea>LOGIN</LoginArea>
+                </Container>
+            </Grid>
+            <Grid item sm={6} sx={{display:{xs: 'none', sm:'block' }}}>
+              <LoginImage/>
+            </Grid>
+          </Grid>
+        </Box>
     </>
   )
 }

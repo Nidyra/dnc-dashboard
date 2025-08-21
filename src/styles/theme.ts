@@ -79,3 +79,5 @@ export const darkTheme: Theme = {
     success: '#008000',
   },
 }
+
+export type ThemeType = typeof lighTheme

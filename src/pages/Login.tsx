@@ -15,18 +15,18 @@ const LoginImage = styled.div`
 function Login() {
   return (
     <>
-        <Box>
-          <Grid container>
-            <Grid item xs={12} sm={6} sx={{alignItems: 'center', display:'flex', height:'100vh'}}>
-                <Container maxWidth="sm">
-                  <LoginArea>LOGIN</LoginArea>
-                </Container>
-            </Grid>
-            <Grid item sm={6} sx={{display:{xs: 'none', sm:'block' }}}>
-              <LoginImage/>
-            </Grid>
+      <Box>
+        <Grid container>
+          <Grid size={{ xs: 12, sm: 6 }} sx={{ alignItems: 'center', display: 'flex', height: '100vh' }}>
+            <Container maxWidth="sm">
+              <LoginArea>LOGIN</LoginArea>
+            </Container>
           </Grid>
-        </Box>
+          <Grid size={{sm:6}} sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <LoginImage />
+          </Grid>
+        </Grid>
+      </Box>
     </>
   )
 }
